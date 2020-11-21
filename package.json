@@ -1,5 +1,5 @@
 {
-  "name": "chinabistro-heroku",
+  "name": "chinabistro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
