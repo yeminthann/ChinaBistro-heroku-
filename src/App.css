@@ -50,11 +50,23 @@ body, html{
     box-shadow: -5px -3px 2px rgba(100, 207, 104, 0.2),
     6px 5px 5px rgba(0, 0, 0, 0.3),
     5px 5px 5px rgba(0, 0, 0, 0.1);
+    transition: all 1s;
   }
-  .card .card-img-overlay {
+  .item-name {
     bottom: 0;
     font-size: 1.5vw;
-    opacity: 0.8;
+    transition: all 1s;
+    transform: translate3d();
+  }
+  .item-name:hover {
+    opacity: 0;
+  }
+  .item-details {
+    opacity: 0;
+    transition: all 1s;
+  }
+  .item-details:hover {
+    opacity: 0.9;
   }
   .card-link .card:hover {
     box-shadow: 2px 5px 5px 2px rgb(61, 61, 60);

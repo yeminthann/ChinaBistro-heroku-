@@ -8,20 +8,20 @@ import About from './AboutComponent';
 import Award from './AwardComponent';
 import Footer from './FooterComponent';
 import ScrollToTop from './ScrollToTop';
-import { fetchMenu, fetchMenuItems } from '../redux/actions/ActionCreaters';
+import { fetchMenu } from '../redux/actions/ActionCreaters';
 import { connect } from 'react-redux';
 import SpecificMenu from './SpecificMenu';
+import axios from 'axios';
 
 const mapStateToprops = state => {
     return {
         menu: state.Menu,
-        menuItems: state.MenuItems
+        // menuItems: state.MenuItems
     };
 }
 
 const mapDispatchToProps = dispatch => ({
-    fetchMenu: () => {dispatch(fetchMenu())},
-    fetchMenuItems: (category) => {dispatch(fetchMenuItems(category))}
+    fetchMenu: () => {dispatch(fetchMenu())}
 })
 
 class Main extends Component {
@@ -29,7 +29,6 @@ class Main extends Component {
     componentDidMount () {
         console.log(this.props);
         this.props.fetchMenu();
-        this.props.fetchMenuItems('SP');
     }
 
     render() {
@@ -42,11 +41,38 @@ class Main extends Component {
             );
         };
 
-        const SpecificMenuPage = ({match}) => {
+        class SpecificMenuPage extends Component {
+            state = {
+                menuItems: [],
+                category: '',
+                menu_name: '',
+                special_instructions: ''
+            }
+            componentDidMount() {
+                const category = this.props.match.params.specific_menu;
+                axios.get(`http://davids-restaurant.herokuapp.com/menu_items.json?category=${category}`)
+                    .then(res => {
+                        console.log(res);
+                        this.setState({
+                            menuItems: res.data.menu_items,
+                            category,
+                            menu_name: res.data.category.name,
+                            special_instructions: res.data.category.special_instructions
+                        })
+                    })
+            }
+            render() {
                 return (
-                    <SpecificMenu menuItems = {this.props.menuItems} category = {match.params.specific_menu} />
-                    );
+                    <SpecificMenu 
+                        category = {this.state.category} 
+                        menuItems = {this.state.menuItems} 
+                        menu_name = {this.state.menu_name} 
+                        special_instructions = {this.state.special_instructions}
+                    />
+                );
+            }
         }
+
         return (
             <BrowserRouter>
                 <NavBar/>
