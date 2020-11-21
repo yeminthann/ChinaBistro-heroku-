@@ -8,7 +8,6 @@ export const Menu = (state = {
     menu: []
 }, action) => {
 
-    // actions (from actionCreaters <===)
     switch (action.type) {
         case ActionTypes.ADD_MENU:
             return {

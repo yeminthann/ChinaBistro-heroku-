@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardHeader, CardBody, CardTitle, CardText, Col, Label, Row, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { Form, Control, Errors, LocalForm } from 'react-redux-form';
+import { Control, LocalForm } from 'react-redux-form';
 
-//UI Component
 const Contact = () => {
     return (
         <div style = {{background: 'rgb(70, 67, 55)'}}>

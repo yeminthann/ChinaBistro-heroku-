@@ -28,7 +28,6 @@ export const category = () => {
     console.log(this.props)
 }
 const Menu = ({menu}) => {
-    // console.log(menu);
     var category = menu.menu.map(item => item.short_name);
     console.log(category);
     if(menu.isLoading) {

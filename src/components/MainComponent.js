@@ -15,8 +15,7 @@ import axios from 'axios';
 
 const mapStateToprops = state => {
     return {
-        menu: state.Menu,
-        // menuItems: state.MenuItems
+        menu: state.Menu
     };
 }
 
