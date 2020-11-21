@@ -1,0 +1,94 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  #root {
+    background: linear-gradient(rgb(131, 57, 57),rgb(135, 184, 135),rgb(158, 147, 100), rgb(74, 135, 139), rgb(190, 190, 201));
+  }
+  
+  .navbar-dark {
+    background-color: rgb(148, 148, 56);
+  }
+  .hr {
+    text-shadow: 3px 2px 3px #000;
+  }
+  .jumbotron {
+    background: rgb(172, 164, 164);
+  }
+  .jum-header {
+    color: rgb(24, 102, 61);
+    font-family: monospace;
+    font-weight: bolder;
+  }
+  .jum-carousel {
+    box-shadow: 2px 3px 2px 3px rgb(85, 81, 81);
+  }
+  .card-header{
+    color: #000;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: monospace;
+    
+  }
+  .soup-name {
+    color: #000;
+    font-weight: bolder;
+    font-size: x-large;
+    font-family: monospace;
+  
+  }
+  
+  .card-link:hover {
+    text-decoration: none;
+  }
+  .feedback-form {
+    box-shadow: 1px 5px 5px 2px rgb(94, 92, 88);
+    border-radius: 10px;
+  }
+  .card {
+    box-shadow: -5px -3px 2px rgba(100, 207, 104, 0.2),
+    6px 5px 5px rgba(0, 0, 0, 0.3),
+    5px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .card .card-img-overlay {
+    bottom: 0;
+    font-size: 1.5vw;
+    opacity: 0.8;
+  }
+  .card-link .card:hover {
+    box-shadow: 2px 5px 5px 2px rgb(61, 61, 60);
+  }
+  .card .label {
+    background: rgb(121, 172, 161);
+    margin-bottom: 0;
+  }
+  .breadcrumb {
+    background-color: rgb(77, 72, 72);
+  }
+  .breadcrumb-item:hover {
+    font-size: large;
+  }
+  .next-btn, .prev-btn {
+    border-radius: 10px;
+    color: aqua;
+    background-color: rgb(112, 109, 109);
+  }
+  .comment-bg {
+    box-shadow: 1px 1px 5px #b4b5b6;
+    border-radius: 20px;
+  }
+  .page-header {
+    border-bottom: 3px solid rgb(109, 128, 75);
+  }
+  
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 500s, color 500s;
+  }
+  .footer {
+    background-color: rgb(70, 67, 67);
+    color: wheat;
+  }
